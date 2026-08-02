@@ -1,0 +1,62 @@
+/* Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base Layer Overrides ────────────────────────────────────────────── */
+@layer base {
+  /* Default font: Inter for body */
+  body {
+    @apply font-body text-text-primary bg-background antialiased;
+  }
+
+  /* Heading font: Poppins */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  /* Remove default list styles where semantic lists are used for layout */
+  ul[role='list'],
+  ol[role='list'] {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Accessible focus outline */
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent-blue ring-offset-2;
+  }
+}
+
+/* ─── Component Layer ─────────────────────────────────────────────────── */
+@layer components {
+  /* Reusable section container */
+  .section-container {
+    @apply max-w-container mx-auto px-6 lg:px-8;
+  }
+
+  /* Accent underline divider shown beneath section headings */
+  .section-divider {
+    @apply w-12 h-1 bg-accent-blue rounded-full mb-10;
+  }
+
+  /* Standard card style */
+  .card {
+    @apply bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  /* Primary button */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-accent-blue text-white font-body font-medium
+           text-sm rounded-lg hover:bg-blue-700 active:bg-blue-800
+           transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2;
+  }
+
+  /* Secondary / outline button */
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 border border-border text-text-primary font-body
+           font-medium text-sm rounded-lg hover:bg-bg-secondary hover:border-text-secondary
+           transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-accent-blue focus:ring-offset-2;
+  }
+}
