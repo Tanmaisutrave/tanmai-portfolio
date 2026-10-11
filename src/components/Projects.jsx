@@ -235,6 +235,18 @@ function ProjectCard({ project, index, categoryLabel }) {
             {project.type}
           </span>
 
+          {/* Additional Badges – if provided */}
+          {project.extraBadges?.map((badge) => (
+            <span
+              key={badge}
+              className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full
+                         bg-bg-secondary border border-border
+                         font-body text-[11px] font-medium text-text-secondary"
+            >
+              {badge}
+            </span>
+          ))}
+
           {/* Featured badge – only shown when project.featured is true */}
           {project.featured && (
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full

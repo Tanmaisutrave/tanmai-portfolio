@@ -14,6 +14,99 @@ const projects = [
       'Building secure, scalable, and responsive web applications using modern frontend and backend technologies with real-world business functionality.',
     items: [
       {
+        id: 'proj-relay',
+        title: 'RELAY — From Codebase Chaos to Engineering Context',
+        type: 'AI-Powered Codebase Intelligence Platform',
+        featured: true,
+        description:
+          'RELAY is an AI-powered codebase intelligence platform designed to help developers understand unfamiliar repositories, discover relevant implementation details, and transfer engineering knowledge efficiently. It brings repository exploration, evidence-backed AI assistance, guided developer onboarding, and structured engineering handoffs into a unified workspace, grounding answers in repository evidence to streamline developer workflows. As a frontend contributor to this team project, I built the developer-facing interface, reusable components, core workflows, onboarding experience, accessibility improvements, and frontend testing.',
+        sections: [
+          {
+            id: 'key-features',
+            label: 'Key Features',
+            items: [
+              'Centralized project workspace for exploring codebase information.',
+              'Repository Explorer for navigating repository content.',
+              'Global Search for finding relevant project information.',
+              'Evidence-first AI question-answering interface.',
+              'Insufficient-evidence handling to avoid unsupported answers.',
+              'Streaming answer interface.',
+              'Guided developer onboarding with structured steps.',
+              'Handoff Generator for preparing technical handoff documentation.',
+              'Versioning and Markdown export for handoff documents.',
+              'Settings, profile, and project configuration interfaces.',
+              'Offline-state handling and Project Not Found UI.',
+              'Accessible interface components and automated frontend tests.',
+            ],
+          },
+          {
+            id: 'contribution',
+            label: 'My Contribution',
+            items: [
+              'Developed and refined frontend pages and reusable React components.',
+              'Implemented core application layouts, navigation, and project workflows.',
+              'Built the repository exploration and global search interfaces.',
+              'Developed the evidence-first answer experience and streaming UI.',
+              'Implemented guided onboarding and handoff-generation interfaces.',
+              'Improved accessibility, application states, and error handling.',
+              'Added automated tests using Vitest and React Testing Library.',
+              'Contributed to frontend validation, build checks, and CI/CD readiness.',
+            ],
+          },
+          {
+            id: 'highlights',
+            label: 'Development Highlights',
+            items: [
+              'Modular frontend architecture using a monorepo structure.',
+              'Reusable UI components and structured application layouts.',
+              'Evidence-first user experience for AI-generated answers.',
+              'Guided onboarding and engineering knowledge transfer.',
+              'Accessibility and automated testing.',
+              'Production-oriented frontend validation.',
+            ],
+          },
+          {
+            id: 'status',
+            label: 'Implementation Status',
+            items: [
+              'Frontend foundation, major interface pages, and core user workflows developed and validated.',
+              'Passed automated checks for TypeScript type-checking, ESLint linting, Vitest unit testing, and Vite production builds.',
+              'Client-side application states, error handling, and mock service worker (MSW) integration implemented.',
+              'Backend API, MongoDB storage, GitHub OAuth, and LLM retrieval pipeline architected; live public deployment and containerized Docker setup pending verification.',
+            ],
+          },
+        ],
+        techStack: [
+          'React',
+          'TypeScript',
+          'Vite',
+          'Tailwind CSS',
+          'Turborepo',
+          'pnpm',
+          'Vitest',
+          'React Testing Library',
+          'GitHub Actions',
+          'GitHub API Integration',
+          'AI-Assisted Retrieval',
+        ],
+        buttons: [
+          {
+            id: 'github',
+            label: 'GitHub Repository',
+            href: 'https://github.com/Abhiix0/relay',
+            variant: 'primary',
+            icon: 'github',
+          },
+          {
+            id: 'live',
+            label: 'Live Demo',
+            href: '',
+            variant: 'secondary',
+            icon: 'external',
+          },
+        ],
+      },
+      {
         id: 'proj-1',
         title: 'Student Auction System',
         type: 'Full Stack MERN Web Application',
@@ -124,6 +217,115 @@ const projects = [
         buttons: [
           { id: 'live',   label: 'Live Demo', href: '', variant: 'primary',   icon: 'external' }, // add URL when deployed
           { id: 'github', label: 'GitHub',    href: '', variant: 'secondary', icon: 'github'   }, // add URL when available
+        ],
+      },
+    ],
+  },
+
+  // ── AI Agents & Intelligent Systems ──────────────────────────────────────────
+  {
+    id: 'cat-ai-agents',
+    category: 'AI Agents & Intelligent Systems',
+    categoryDescription:
+      'Designing and developing intelligent AI agent architectures that combine large language models, persistent memory systems, autonomous workflows, retrieval, and automated decision-making to solve complex engineering challenges.',
+    items: [
+      {
+        id: 'proj-incident-memory',
+        title: 'Incident Memory Command Center',
+        subtitle: 'AI-Powered Incident Response Agent with Persistent Memory',
+        type: 'Full Stack Development',
+        extraBadges: ['AI & Persistent Memory'],
+        featured: true,
+        featuredLabel: 'Featured Project',
+        description:
+          'Incident Memory Command Center is an AI-powered incident response platform designed to help DevOps engineers, Site Reliability Engineers (SREs), and on-call production teams investigate and resolve recurring production issues more effectively. It integrates Hindsight as a persistent memory layer to recall historical incidents, root causes, previous resolutions, and lessons learned. By combining current incident evidence with historical operational knowledge, the platform helps engineers investigate recurring problems and make more informed troubleshooting decisions. Unlike a basic AI chatbot, the system is designed to preserve knowledge from previous incidents and make it available during future investigations.',
+        sections: [
+          {
+            id: 'key-features',
+            label: 'Key Features',
+            items: [
+              'AI-powered production incident analysis.',
+              'Historical incident retrieval using Hindsight.',
+              'Evidence-based root-cause suggestions.',
+              'Recommended investigation and troubleshooting steps.',
+              'Resolve & Remember workflow for retaining incident resolutions.',
+              'Persistent memory for historical operational knowledge.',
+              'Memory Explorer for searching stored memories.',
+              'Learning Center for discovering patterns and insights.',
+              'Incident comparison for examining similar incidents.',
+              'System health monitoring for backend, AI, and memory services.',
+            ],
+          },
+          {
+            id: 'how-it-works',
+            label: 'How It Works',
+            items: [
+              '1. An engineer submits a production incident.',
+              '2. The system retrieves relevant historical memories from Hindsight.',
+              '3. The AI analyzes the incident alongside available evidence and historical context.',
+              '4. The application presents likely root causes and recommended investigation steps.',
+              '5. Once the incident is resolved, its resolution and lessons can be retained in persistent memory.',
+              '6. Future incidents can retrieve this accumulated knowledge.',
+            ],
+          },
+          {
+            id: 'contribution',
+            label: 'My Contribution',
+            items: [
+              'Developed the full-stack incident response application.',
+              'Contributed to the React frontend and FastAPI backend.',
+              'Integrated Groq LLM capabilities for structured incident analysis.',
+              'Integrated Hindsight persistent memory operations, including RETAIN, RECALL, and REFLECT.',
+              'Developed incident analysis and resolution workflows.',
+              'Built the dashboard, Memory Explorer, and supporting application pages.',
+              'Improved connectivity, response mapping, and application reliability.',
+              'Worked on testing and validating the incident analysis and memory workflows.',
+            ],
+          },
+          {
+            id: 'impact',
+            label: 'Project Impact',
+            items: [
+              'Demonstrates how persistent memory can improve AI-assisted incident response by connecting new production problems with previously accumulated operational experience.',
+              'Helps engineers retrieve historical knowledge, investigate recurring issues, and preserve lessons for future incident resolution.',
+            ],
+          },
+          {
+            id: 'core-concept',
+            label: 'Core Concept',
+            items: [
+              'Remember incidents. Learn from resolutions. Improve future responses.',
+            ],
+          },
+        ],
+        techStack: [
+          'React.js',
+          'Vite',
+          'Tailwind CSS',
+          'Python',
+          'FastAPI',
+          'REST APIs',
+          'Groq LLM',
+          'Hindsight',
+          'Pydantic',
+          'Git',
+          'GitHub',
+        ],
+        buttons: [
+          {
+            id: 'github',
+            label: 'GitHub Repository',
+            href: 'https://github.com/Tanmaisutrave/incident-memory-command-center',
+            variant: 'primary',
+            icon: 'github',
+          },
+          {
+            id: 'live',
+            label: 'Live Demo',
+            href: 'https://incident-memory-command-center.onrender.com/',
+            variant: 'secondary',
+            icon: 'external',
+          },
         ],
       },
     ],
